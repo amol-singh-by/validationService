@@ -3,16 +3,7 @@ import re
 import json
 import jsonschema
 from typing import List, Any, Union
-
-SERVICE_DEF_PATH = ('C:\\clone_develop\\lde-7993-2\\lde\\src\\main\\'
-                    'resources\\config-repo\\ServiceRegistry\\resources\\'
-                    'configuration\\service-definitions\\LPA-2021.1.0.yaml')
-WORKFLOW_CFG_PATH = ('C:\\clone_develop\\lde-7993-2\\lde\\src\\main\\'
-                     'resources\\config-repo\\lpa\\resources\\config\\'
-                     'workflowConfig.json')
-TRANSFORM_CFG_PATH = ('C:\\clone_develop\\lde-7993-2\\lde\\src\\main\\'
-                      'resources\\config-repo\\lpa\\resources\\config\\'
-                      'transformConfig.json')
+from Properties import *
 
 
 def load_servicedefinition_entitylist() -> []:
