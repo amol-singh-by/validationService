@@ -20,7 +20,7 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_file: 'validation_standalone.py'
-        destination_repo: 'amol-singh-by/validationService'
+        destination_repo: 'amol-singh-by/validateLPConfig'
         destination_folder: ''
         user_email: 'amol.singh@blueyonder.com'
         user_name: 'amol-singh-by'
