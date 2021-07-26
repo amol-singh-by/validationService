@@ -2,7 +2,7 @@ name: Push File
 
 on: 
   push:
-    branches: [ master ]
+    branches: [ main ]
 # Triggers the workflow on push or pull request events but only for the main branch
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
         echo "The API_TOKEN_GITHUB is ${{ secrets.API_TOKEN_GITHUB }}"
         
     - name: Pushes test file
-      uses: amol-singh-by/validationService@master
+      uses: amol-singh-by/validationService@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
