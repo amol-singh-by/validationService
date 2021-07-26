@@ -25,3 +25,17 @@ jobs:
         user_email: 'amol.singh@blueyonder.com'
         user_name: 'amol-singh-by'
         commit_message: 'A custom message for the commit'
+        
+    
+    - name: Pushes test file
+      uses: amol-singh-by/validationService@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'log.txt'
+        destination_repo: 'amol-singh-by/validateLPConfig'
+        destination_folder: ''
+        user_email: 'amol.singh@blueyonder.com'
+        user_name: 'amol-singh-by'
+        commit_message: 'A custom message for the commit'
+        
