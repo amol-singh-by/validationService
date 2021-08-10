@@ -14,7 +14,7 @@ jobs:
     - run: | 
         echo "The API_TOKEN_GITHUB is ${{ secrets.API_TOKEN_GITHUB }}"
         
-    - name: Pushes validation scripts folder 
+    - name: Pushes validation scripts folder
       uses: amol-singh-by/validationService@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
