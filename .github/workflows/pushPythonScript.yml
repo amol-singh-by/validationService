@@ -14,40 +14,40 @@ jobs:
     - run: | 
         echo "The API_TOKEN_GITHUB is ${{ secrets.API_TOKEN_GITHUB }}"
         
-    - name: Pushes test file
+    - name: Pushes validation scripts folder
       uses: amol-singh-by/validationService@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'validation_standalone.py'
+        source_file: 'validationScriptForLPA'
         destination_repo: 'amol-singh-by/validateLPConfig'
         destination_folder: ''
         user_email: 'amol.singh@blueyonder.com'
         user_name: 'amol-singh-by'
-        commit_message: 'A custom message for the commit'
+        commit_message: 'Committing validation scripts for LPA'
         
     
-    - name: Pushes test file
+    - name: Pushes log folder
       uses: amol-singh-by/validationService@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'log.txt'
+        source_file: 'logs'
         destination_repo: 'amol-singh-by/validateLPConfig'
         destination_folder: ''
         user_email: 'amol.singh@blueyonder.com'
         user_name: 'amol-singh-by'
-        commit_message: 'A custom message for the commit'
+        commit_message: 'Committing validations log folder'
         
-    - name: Pushes test file 
+    - name: Pushes schema folder 
       uses: amol-singh-by/validationService@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'deleteLogs.py'
+        source_file: 'schemaToValidate'
         destination_repo: 'amol-singh-by/validateLPConfig'
         destination_folder: ''
         user_email: 'amol.singh@blueyonder.com'
         user_name: 'amol-singh-by'
-        commit_message: 'A custom message for the commit'
+        commit_message: 'Committing schema to validate for LPA'
         
