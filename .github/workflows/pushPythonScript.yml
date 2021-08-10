@@ -38,6 +38,18 @@ jobs:
         user_email: 'amol.singh@blueyonder.com'
         user_name: 'amol-singh-by'
         commit_message: 'Committing validations log folder'
+  
+    - name: Pushes target folder
+      uses: amol-singh-by/validationService@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'target'
+        destination_repo: 'amol-singh-by/validateLPConfig'
+        destination_folder: ''
+        user_email: 'amol.singh@blueyonder.com'
+        user_name: 'amol-singh-by'
+        commit_message: 'Committing validations log folder'
         
     - name: Pushes schema folder 
       uses: amol-singh-by/validationService@main
